@@ -26,7 +26,7 @@
 }
 
 .cta__title {
-    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-size: clamp(2.2rem, 10vw, 5rem);
     font-weight: 800;
     text-transform: uppercase;
     line-height: 0.95;
@@ -94,8 +94,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: var(--space-8);
+    gap: var(--space-4);
     opacity: 0.5;
+}
+
+@media (min-width: 640px) {
+    .cta__footer {
+        gap: var(--space-8);
+    }
 }
 
 .cta__stat {
