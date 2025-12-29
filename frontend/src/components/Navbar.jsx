@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { useTheme, ThemeSwitch } from './ThemeToggle';
 import './Navbar.css';
 
 const navLinks = [
@@ -16,6 +17,7 @@ const INSTAGRAM_DM = 'https://ig.me/m/theladyscarlot';
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -91,6 +93,15 @@ export default function Navbar() {
                                     {link.name}
                                 </motion.a>
                             ))}
+
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.35 }}
+                            >
+                                <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
+                            </motion.div>
+
                             <motion.a
                                 href={INSTAGRAM_DM}
                                 target="_blank"

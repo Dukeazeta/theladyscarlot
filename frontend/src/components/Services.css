@@ -44,7 +44,7 @@
 /* Card */
 .services__card {
     padding: var(--space-10) var(--space-8);
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     display: flex;
@@ -56,7 +56,7 @@
 }
 
 .services__card:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-accent-soft);
     border-color: var(--color-accent);
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);

@@ -115,7 +115,8 @@
 .why-choose__image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 0%, rgba(10, 8, 8, 0.5) 100%);
+    background: linear-gradient(to bottom, transparent 0%, var(--color-bg-primary) 100%);
+    opacity: 0.6;
 }
 
 .why-choose__badge {
