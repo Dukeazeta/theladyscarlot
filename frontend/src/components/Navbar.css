@@ -1,0 +1,188 @@
+.navbar {
+    position: fixed;
+    top: var(--space-4);
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0;
+    transition: all var(--transition-smooth);
+}
+
+.navbar__container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: var(--space-4) var(--space-6);
+    background: rgba(10, 8, 8, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-smooth);
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .navbar__container {
+        grid-template-columns: 1fr auto 1fr;
+        padding: var(--space-2) var(--space-2) var(--space-2) var(--space-6);
+        width: fit-content;
+        min-width: 900px;
+    }
+}
+
+.navbar__col {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__col--left {
+    justify-content: flex-start;
+}
+
+.navbar__col--center {
+    justify-content: center;
+}
+
+.navbar__col--right {
+    justify-content: flex-end;
+    gap: var(--space-4);
+}
+
+.navbar__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    color: var(--color-accent);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+    z-index: 1001;
+}
+
+.navbar__toggle:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+@media (min-width: 1024px) {
+    .navbar__toggle {
+        display: none;
+    }
+}
+
+.navbar--scrolled .navbar__container {
+    background: rgba(20, 13, 13, 0.85);
+    border-color: var(--color-accent-soft);
+}
+
+/* Logo */
+.navbar__logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.navbar__logo-text {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.navbar__logo-accent {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--color-accent);
+}
+
+/* Desktop Navigation */
+.navbar__nav {
+    display: none;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+@media (min-width: 1024px) {
+    .navbar__nav {
+        display: flex;
+    }
+}
+
+.navbar__link {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+}
+
+.navbar__link:hover {
+    color: var(--color-accent);
+}
+
+/* CTA Button */
+.navbar__cta {
+    display: none;
+    padding: var(--space-3) var(--space-8);
+    font-size: var(--text-xs);
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .navbar__cta {
+        display: inline-flex;
+    }
+}
+
+/* Mobile Menu */
+.navbar__mobile {
+    position: fixed;
+    top: calc(var(--space-4) + 84px);
+    left: var(--space-4);
+    right: var(--space-4);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar__mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.navbar__mobile-link {
+    font-size: var(--text-xl);
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.navbar__mobile-link:hover {
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+}
+
+.navbar__mobile-cta {
+    margin-top: var(--space-4);
+    width: 100%;
+    padding: var(--space-4);
+}
