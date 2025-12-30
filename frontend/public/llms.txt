@@ -1,0 +1,23 @@
+# The Lady's Car Lot
+
+Premium luxury car rentals in Lagos, Nigeria. Elite fleet including exotic sports cars, premium SUVs, and executive chauffeur services.
+
+## Core Features
+- Luxury Car Fleet (Lamborghini, Ferrari, Mercedes-Benz, Range Rover, etc.)
+- Premium Chauffeur Services
+- Luxury Car Rentals for Weddings, Events, and Executive Travel
+- Professional and Reliable Service in Lagos
+
+## Tech Stack
+- Frontend: React, Vite, Framer Motion
+- Styling: Vanilla CSS (Modern aesthetic)
+- Deployment: Web-ready
+
+## Contact & Location
+- Location: Lagos Island, Lagos, Nigeria
+- Website: https://theladyscarlot.com/
+- Available 24/7 for booking luxury experiences.
+
+## SEO Metadata
+- Title: The Lady's Car Lot | Luxury Car Rentals in Lagos, Nigeria
+- Description: Experience premium luxury car rentals in Lagos. From exotic sports cars to executive SUVs, arrive in style with The Lady's Car Lot.

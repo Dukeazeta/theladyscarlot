@@ -2,51 +2,57 @@ import { motion, useInView, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { HiArrowRight } from 'react-icons/hi';
 import './Fleet.css';
+import bentleyImg from '../assets/Fleet/Bentley.webp';
+import lexusImg from '../assets/Fleet/Lexus LX500.webp';
+import gwagonImg from '../assets/Fleet/Mercedes G-Wagon.webp';
+import gleImg from '../assets/Fleet/Mercedes GLE.webp';
+import s580Img from '../assets/Fleet/Mercedes S580.webp';
+import landcruiserImg from '../assets/Fleet/Toyota LandCruiser.webp';
 
 const INSTAGRAM_DM = 'https://ig.me/m/theladyscarlot';
 
 const vehicles = [
     {
         id: 1,
-        name: 'Mercedes-Benz S-Class',
+        name: 'Mercedes-Benz S580',
         category: 'Luxury Sedan',
-        image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&auto=format&fit=crop&q=80',
-        features: ['Chauffeur Available', 'Premium Interior'],
+        image: s580Img,
+        features: ['Executive Comfort', 'V8 Powerhouse'],
     },
     {
         id: 2,
-        name: 'Range Rover Autobiography',
+        name: 'Mercedes-Benz G-Wagon',
         category: 'Luxury SUV',
-        image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&auto=format&fit=crop&q=80',
-        features: ['Self-Drive', '4x4 Capability'],
+        image: gwagonImg,
+        features: ['Iconic Presence', 'Ultimate Style'],
     },
     {
         id: 3,
-        name: 'Porsche 911 Carrera',
-        category: 'Sports Car',
-        image: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f373f?w=600&auto=format&fit=crop&q=80',
-        features: ['Performance', 'Convertible'],
+        name: 'Bentley Continental',
+        category: 'Grand Tourer',
+        image: bentleyImg,
+        features: ['Pure Elegance', 'Handcrafted Luxury'],
     },
     {
         id: 4,
-        name: 'Bentley Continental GT',
-        category: 'Grand Tourer',
-        image: 'https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=600&auto=format&fit=crop&q=80',
-        features: ['Ultimate Luxury', 'Handcrafted'],
+        name: 'Lexus LX500',
+        category: 'Premium SUV',
+        image: lexusImg,
+        features: ['Refined Strength', 'Chauffeur Top Choice'],
     },
     {
         id: 5,
-        name: 'BMW 7 Series',
-        category: 'Executive Sedan',
-        image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&auto=format&fit=crop&q=80',
-        features: ['Executive Class', 'Tech Forward'],
+        name: 'Mercedes-Benz GLE',
+        category: 'Executive SUV',
+        image: gleImg,
+        features: ['Versatile Luxury', 'Modern Tech'],
     },
     {
         id: 6,
-        name: 'Rolls-Royce Ghost',
-        category: 'Ultra Luxury',
-        image: 'https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=600&auto=format&fit=crop&q=80',
-        features: ['Bespoke', 'Whisper Quiet'],
+        name: 'Toyota LandCruiser 300',
+        category: 'Premium SUV',
+        image: landcruiserImg,
+        features: ['King of Roads', 'Executive Edition'],
     },
 ];
 
@@ -77,6 +83,7 @@ function FleetCard({ vehicle, index, isInView }) {
                     <motion.img
                         src={vehicle.image}
                         alt={vehicle.name}
+                        loading="lazy"
                         style={{ y, scale: 1.2 }}
                     />
                     <div className="fleet__card-overlay" />
@@ -124,7 +131,7 @@ export default function Fleet() {
                         Legendary <span className="underline">Fleet</span>
                     </h2>
                     <p className="fleet__subtitle">
-                        An curated selection of high-performance automobiles for the discerning traveler.
+                        A curated selection of high-performance automobiles for the discerning traveler.
                     </p>
                 </motion.div>
 

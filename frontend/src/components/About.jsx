@@ -1,5 +1,6 @@
 import { motion, useInView, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
+import escaladeVideo from '../assets/Fleet/Escalade Preview.webm';
 import './About.css';
 
 export default function About() {
@@ -28,11 +29,15 @@ export default function About() {
                     >
                         <div className="about__image-decoration" />
                         <div className="about__image-wrapper">
-                            <motion.img
-                                src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&auto=format&fit=crop&q=80"
-                                alt="Luxury details"
+                            <motion.video
+                                src={escaladeVideo}
                                 className="about__image"
                                 style={{ y }}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                preload="metadata"
                             />
                             <div className="about__image-overlay" />
                         </div>

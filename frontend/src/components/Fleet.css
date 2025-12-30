@@ -118,7 +118,8 @@
     font-family: var(--font-display);
     font-size: var(--text-2xl);
     font-weight: 700;
-    color: var(--color-text-primary);
+    color: #fcfcfc;
+    /* Forced light color for contrast */
     line-height: 1.1;
     margin-bottom: var(--space-4);
 }
@@ -144,7 +145,8 @@
 
 .fleet__card-feature {
     font-size: var(--text-xs);
-    color: var(--color-text-secondary);
+    color: #d1b8b8;
+    /* Forced light color for contrast */
     display: flex;
     align-items: center;
     gap: var(--space-1);
@@ -161,7 +163,8 @@
     gap: var(--space-2);
     font-size: var(--text-sm);
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: #fcfcfc;
+    /* Forced light color for contrast */
     text-transform: uppercase;
     letter-spacing: 0.1em;
     opacity: 0;

@@ -92,6 +92,7 @@ export default function WhyChooseUs() {
                             <motion.img
                                 src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&auto=format&fit=crop&q=80"
                                 alt="Luxury car experience"
+                                loading="lazy"
                                 className="why-choose__image"
                                 style={{ y }}
                             />
@@ -103,7 +104,7 @@ export default function WhyChooseUs() {
                             animate={isInView ? { scale: 1, rotate: 0 } : {}}
                             transition={{ duration: 0.8, delay: 0.8, type: 'spring' }}
                         >
-                            <span className="why-choose__badge-number">10+</span>
+                            <span className="why-choose__badge-number">2+</span>
                             <span className="why-choose__badge-text">Years Excellence</span>
                         </motion.div>
                     </motion.div>

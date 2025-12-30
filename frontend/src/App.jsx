@@ -6,6 +6,7 @@ import Fleet from './components/Fleet';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import CTA from './components/CTA';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 
@@ -18,6 +19,7 @@ function App() {
         <About />
         <Fleet />
         <Services />
+        <FAQ />
         <WhyChooseUs />
         <CTA />
       </main>

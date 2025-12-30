@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
-import { FaInstagram, FaTwitter, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { HiLocationMarker, HiPhone, HiMail } from 'react-icons/hi';
 import './Footer.css';
 
@@ -12,14 +12,13 @@ const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Fleet', href: '#fleet' },
     { name: 'Services', href: '#services' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
 ];
 
 const socialLinks = [
     { icon: FaInstagram, href: INSTAGRAM, label: 'Instagram' },
-    { icon: FaTwitter, href: '#', label: 'Twitter' },
-    { icon: FaFacebookF, href: '#', label: 'Facebook' },
-    { icon: FaWhatsapp, href: 'https://wa.me/2341234567890', label: 'WhatsApp' },
+    { icon: FaWhatsapp, href: 'https://wa.me/2347048133230', label: 'WhatsApp' },
 ];
 
 export default function Footer() {
@@ -106,7 +105,7 @@ export default function Footer() {
                             </div>
                             <div className="footer__contact-item">
                                 <HiPhone />
-                                <span>+234 123 456 7890</span>
+                                <span>+234 704 813 3230</span>
                             </div>
                             <div className="footer__contact-item">
                                 <HiMail />

@@ -4,24 +4,85 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="manifest" href="/sites.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>The Lady's Car Lot | Premium Car Rentals in Lagos, Nigeria</title>
+  <title>The Lady's Car Lot | Luxury Car Rentals in Lagos, Nigeria</title>
   <meta name="description"
-    content="Experience luxury car rentals in Lagos. From exotic sports cars to premium SUVs, arrive in style with The Lady's Car Lot. Book your dream ride today." />
+    content="Experience premium luxury car rentals in Lagos. From exotic sports cars to executive SUVs, arrive in style with The Lady's Car Lot. Reliable, professional, and elite car hire services." />
   <meta name="keywords"
-    content="car rental Lagos, luxury car hire Nigeria, exotic cars Lagos, premium car rentals, wedding car hire Lagos" />
+    content="car rental Lagos, luxury car hire Nigeria, exotic cars Lagos, premium car rentals, wedding car hire Lagos, executive chauffeur Lagos, The Lady's Car Lot" />
+  <link rel="canonical" href="https://theladyscarlot.com/" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theladyscarlot.com/" />
   <meta property="og:title" content="The Lady's Car Lot | Premium Car Rentals in Lagos" />
   <meta property="og:description"
-    content="Experience luxury car rentals in Lagos. Arrive in style with The Lady's Car Lot." />
-  <meta property="og:type" content="website" />
+    content="Experience luxury car rentals in Lagos. From exotic sports cars to premium SUVs, arrive in style." />
+  <meta property="og:image" content="https://theladyscarlot.com/og-image.jpg" />
+  <meta property="og:site_name" content="The Lady's Car Lot" />
 
-  <!-- Google Fonts -->
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://theladyscarlot.com/" />
+  <meta property="twitter:title" content="The Lady's Car Lot | Luxury Car Rentals" />
+  <meta property="twitter:description"
+    content="Elite car rental services in Lagos. Exotic and premium vehicles for any occasion." />
+  <meta property="twitter:image" content="https://theladyscarlot.com/og-image.jpg" />
+
+  <!-- Structured Data: JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CarRental",
+      "name": "The Lady's Car Lot",
+      "image": "https://theladyscarlot.com/og-image.jpg",
+      "@id": "https://theladyscarlot.com",
+      "url": "https://theladyscarlot.com",
+      "telephone": "+2347048133230",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lagos Island",
+        "addressLocality": "Lagos",
+        "addressRegion": "LA",
+        "postalCode": "100001",
+        "addressCountry": "NG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 6.465422,
+        "longitude": 3.406448
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+  </script>
+
+  <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap">
+
+  <!-- Critical Asset Preload -->
+  <link rel="preload" as="image"
+    href="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop&q=90">
+
+  <!-- Main Styles -->
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap"
     rel="stylesheet">

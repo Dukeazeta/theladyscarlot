@@ -1,0 +1,16 @@
+{
+  "name": "The Lady's Car Lot",
+  "short_name": "Lady's Car Lot",
+  "description": "Premium luxury car rentals in Lagos, Nigeria.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
