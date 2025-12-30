@@ -1,31 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Fleet from './components/Fleet';
-import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
-import CTA from './components/CTA';
-import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
+import LandingPage from './pages/LandingPage';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Fleet />
-        <Services />
-        <FAQ />
-        <WhyChooseUs />
-        <CTA />
-      </main>
-      <Footer />
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+      </Routes>
       <ThemeToggle />
-    </>
+    </Router>
   );
 }
 

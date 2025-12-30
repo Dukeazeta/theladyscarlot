@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { Link, useLocation } from 'react-router-dom';
 import { useTheme, ThemeSwitch } from './ThemeToggle';
 import './Navbar.css';
 
@@ -19,6 +20,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const { theme, toggleTheme } = useTheme();
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,20 +39,24 @@ export default function Navbar() {
         >
             <div className="navbar__container">
                 <div className="navbar__col navbar__col--left">
-                    <a href="#home" className="navbar__logo">
+                    <Link to="/" className="navbar__logo">
                         <span className="navbar__logo-text">The Lady's</span>
                         <span className="navbar__logo-accent">Car Lot</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="navbar__col navbar__col--center">
-                    {/* Desktop Navigation */}
                     <nav className="navbar__nav">
-                        {navLinks.map((link) => (
-                            <a key={link.name} href={link.href} className="navbar__link">
-                                {link.name}
-                            </a>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isInternal = link.href.startsWith('#');
+                            const href = isInternal && location.pathname !== '/' ? `/${link.href}` : link.href;
+
+                            return (
+                                <a key={link.name} href={href} className="navbar__link">
+                                    {link.name}
+                                </a>
+                            );
+                        })}
                     </nav>
                 </div>
 
@@ -81,19 +87,24 @@ export default function Navbar() {
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <nav className="navbar__mobile-nav">
-                            {navLinks.map((link, index) => (
-                                <motion.a
-                                    key={link.name}
-                                    href={link.href}
-                                    className="navbar__mobile-link"
-                                    onClick={() => setIsOpen(false)}
-                                    initial={{ opacity: 0, x: -10 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.1 + index * 0.05 }}
-                                >
-                                    {link.name}
-                                </motion.a>
-                            ))}
+                            {navLinks.map((link, index) => {
+                                const isInternal = link.href.startsWith('#');
+                                const href = isInternal && location.pathname !== '/' ? `/${link.href}` : link.href;
+
+                                return (
+                                    <motion.a
+                                        key={link.name}
+                                        href={href}
+                                        className="navbar__mobile-link"
+                                        onClick={() => setIsOpen(false)}
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.1 + index * 0.05 }}
+                                    >
+                                        {link.name}
+                                    </motion.a>
+                                );
+                            })}
 
                             <motion.div
                                 initial={{ opacity: 0 }}

@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { HiLocationMarker, HiPhone, HiMail } from 'react-icons/hi';
 import './Footer.css';
@@ -139,11 +140,11 @@ export default function Footer() {
 
                 <div className="footer__bottom">
                     <p className="footer__copyright">
-                        © {currentYear} The Lady's Car Lot. Crafted for Excellence.
+                        © {currentYear} The Lady's Car Lot. Crafted By KOKO Labs.
                     </p>
                     <div className="footer__legal">
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
+                        <Link to="/privacy">Privacy</Link>
+                        <Link to="/terms">Terms</Link>
                     </div>
                 </div>
             </div>
