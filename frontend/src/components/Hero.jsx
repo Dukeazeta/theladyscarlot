@@ -92,7 +92,7 @@ export default function Hero() {
                     <div className="hero__image-wrapper">
                         <motion.img
                             src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop&q=90"
-                            alt="Luxury Porsche"
+                            alt="Luxury Porsche sports car rental available in Lagos Nigeria - The Lady's Car Lot premium vehicle fleet"
                             className="hero__main-image"
                             style={{ y }}
                         />

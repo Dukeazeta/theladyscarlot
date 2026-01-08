@@ -12,8 +12,25 @@
   <meta name="description"
     content="Experience premium luxury car rentals in Lagos. From exotic sports cars to executive SUVs, arrive in style with The Lady's Car Lot. Reliable, professional, and elite car hire services." />
   <meta name="keywords"
-    content="car rental Lagos, luxury car hire Nigeria, exotic cars Lagos, premium car rentals, wedding car hire Lagos, executive chauffeur Lagos, The Lady's Car Lot" />
+    content="car rental Lagos, luxury car hire Nigeria, exotic cars Lagos, premium car rentals, wedding car hire Lagos, executive chauffeur Lagos, The Lady's Car Lot, Mercedes rental Lagos, G-Wagon hire Nigeria, Bentley rental Lagos, airport pickup Lagos, corporate car hire Lagos, self drive car rental Lagos, chauffeur service Lagos, luxury SUV rental Nigeria, event car hire Lagos" />
   <link rel="canonical" href="https://theladyscarlot.com/" />
+
+  <!-- Hreflang & Language -->
+  <link rel="alternate" hreflang="en-ng" href="https://theladyscarlot.com/" />
+  <link rel="alternate" hreflang="en" href="https://theladyscarlot.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://theladyscarlot.com/" />
+  <meta name="language" content="English" />
+
+  <!-- Geo Tags for Local SEO -->
+  <meta name="geo.region" content="NG-LA" />
+  <meta name="geo.placename" content="Lagos" />
+  <meta name="geo.position" content="6.465422;3.406448" />
+  <meta name="ICBM" content="6.465422, 3.406448" />
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="The Lady's Car Lot" />
+  <meta name="revisit-after" content="7 days" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -21,7 +38,7 @@
   <meta property="og:title" content="The Lady's Car Lot | Premium Car Rentals in Lagos" />
   <meta property="og:description"
     content="Experience luxury car rentals in Lagos. From exotic sports cars to premium SUVs, arrive in style." />
-  <meta property="og:image" content="https://theladyscarlot.com/og-image.jpg" />
+  <meta property="og:image" content="https://theladyscarlot.com/og-image.png" />
   <meta property="og:site_name" content="The Lady's Car Lot" />
 
   <!-- Twitter -->
@@ -30,18 +47,20 @@
   <meta property="twitter:title" content="The Lady's Car Lot | Luxury Car Rentals" />
   <meta property="twitter:description"
     content="Elite car rental services in Lagos. Exotic and premium vehicles for any occasion." />
-  <meta property="twitter:image" content="https://theladyscarlot.com/og-image.jpg" />
+  <meta property="twitter:image" content="https://theladyscarlot.com/og-image.png" />
 
-  <!-- Structured Data: JSON-LD -->
+  <!-- Structured Data: CarRental (Local Business) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CarRental",
       "name": "The Lady's Car Lot",
-      "image": "https://theladyscarlot.com/og-image.jpg",
+      "image": "https://theladyscarlot.com/og-image.png",
       "@id": "https://theladyscarlot.com",
       "url": "https://theladyscarlot.com",
       "telephone": "+2347048133230",
+      "priceRange": "₦₦₦",
+      "description": "Premium luxury car rentals in Lagos, Nigeria. Exotic sports cars, executive SUVs, wedding cars, and chauffeur services.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Lagos Island",
@@ -57,18 +76,119 @@
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         "opens": "00:00",
         "closes": "23:59"
-      }
+      },
+      "sameAs": [
+        "https://www.instagram.com/theladyscarlot"
+      ]
+    }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Lady's Car Lot",
+      "url": "https://theladyscarlot.com",
+      "logo": "https://theladyscarlot.com/favicon.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+2347048133230",
+        "contactType": "customer service",
+        "areaServed": "NG",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.instagram.com/theladyscarlot"
+      ]
+    }
+  </script>
+
+  <!-- Structured Data: Services -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Car Rental Services",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "position": 1,
+          "name": "Wedding & Event Car Hire",
+          "description": "Luxury wedding cars and event transport solutions in Lagos for your special day",
+          "provider": {"@type": "Organization", "name": "The Lady's Car Lot"},
+          "areaServed": {"@type": "City", "name": "Lagos"}
+        },
+        {
+          "@type": "Service",
+          "position": 2,
+          "name": "Corporate Car Hire",
+          "description": "Premium chauffeur-driven vehicles for business executives and corporate occasions in Lagos",
+          "provider": {"@type": "Organization", "name": "The Lady's Car Lot"},
+          "areaServed": {"@type": "City", "name": "Lagos"}
+        },
+        {
+          "@type": "Service",
+          "position": 3,
+          "name": "Airport Transfer Service",
+          "description": "Reliable luxury airport pickup and drop-off service for Lagos airports",
+          "provider": {"@type": "Organization", "name": "The Lady's Car Lot"},
+          "areaServed": {"@type": "City", "name": "Lagos"}
+        },
+        {
+          "@type": "Service",
+          "position": 4,
+          "name": "Self-Drive Car Rentals",
+          "description": "Flexible self-drive luxury car rentals for daily, weekly, or monthly hire in Lagos",
+          "provider": {"@type": "Organization", "name": "The Lady's Car Lot"},
+          "areaServed": {"@type": "City", "name": "Lagos"}
+        }
+      ]
+    }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you charge by the hour for additional time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Precision is key to our service. We charge per quarter for additional time beyond the initial booking. This ensures you only pay for the exact luxury experience you consume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kinds of cars do you have for sale and rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our curated selection includes the world's most prestigious automobiles: Mercedes-Benz S-Class & G-Wagons, Bentley, Lexus, and more. We offer both acquisition services and custom rental durations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your rental rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Luxury is bespoke. Our rates are calculated based on vehicle class, chauffeur requirements, and specific itineraries. Contact our concierge for a tailored quotation that matches your expectations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is chauffeur service included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer both self-drive and professional chauffeur options. Our drivers are trained in elite hospitality and defensive driving, ensuring your journey is as safe as it is sophisticated."
+          }
+        }
+      ]
     }
   </script>
 

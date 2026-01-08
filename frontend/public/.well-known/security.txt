@@ -1,0 +1,6 @@
+# Security Contact Information
+# https://securitytxt.org/
+
+Contact: mailto:contact@theladyscarlot.com
+Preferred-Languages: en
+Canonical: https://theladyscarlot.com/.well-known/security.txt

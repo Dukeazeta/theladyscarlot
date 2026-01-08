@@ -82,7 +82,7 @@ function FleetCard({ vehicle, index, isInView }) {
                 <div className="fleet__card-image">
                     <motion.img
                         src={vehicle.image}
-                        alt={vehicle.name}
+                        alt={`${vehicle.name} for rent in Lagos Nigeria - ${vehicle.category} hire at The Lady's Car Lot`}
                         loading="lazy"
                         style={{ y, scale: 1.2 }}
                     />
