@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme, ThemeSwitch } from './ThemeToggle';
+import logoLight from '../assets/logo-light.png';
+import logoDark from '../assets/logo-dark.png';
 import './Navbar.css';
 
 const navLinks = [
@@ -30,6 +32,8 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const Logo = theme === 'dark' ? logoLight : logoDark;
+
     return (
         <motion.header
             className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
@@ -40,8 +44,7 @@ export default function Navbar() {
             <div className="navbar__container">
                 <div className="navbar__col navbar__col--left">
                     <Link to="/" className="navbar__logo">
-                        <span className="navbar__logo-text">The Lady's</span>
-                        <span className="navbar__logo-accent">Car Lot</span>
+                        <img src={Logo} alt="The Lady's Car Lot" className="navbar__logo-img" />
                     </Link>
                 </div>
 

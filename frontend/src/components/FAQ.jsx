@@ -7,22 +7,22 @@ const faqs = [
     {
         id: "01",
         question: "Do you charge by the hour for additional time?",
-        answer: "Precision is key to our service. We charge per quarter for additional time beyond the initial booking. This ensures you only pay for the exact luxury experience you consume."
+        answer: "Our standard booking period is 12 hours. For those requiring extended access, bookings can be seamlessly upgraded to a full 24-hour period at double the 12-hour rate."
     },
     {
         id: "02",
-        question: "What kinds of cars do you have for sale and rent?",
-        answer: "Our curated selection includes the world's most prestigious automobiles: Mercedes-Benz S-Class & G-Wagons, Bentley, Lexus, and more. We offer both acquisition services and custom rental durations."
+        question: "What kinds of cars do you have in your fleet?",
+        answer: "Our curated selection includes the world's most prestigious automobiles: Mercedes-Benz S-Class & G-Wagons, Bentley, Lexus, and more. We offer custom rental durations for all vehicles in our collection."
     },
     {
         id: "03",
         question: "What are your rental rates?",
-        answer: "Luxury is bespoke. Our rates are calculated based on vehicle class, chauffeur requirements, and specific itineraries. Contact our concierge for a tailored quotation that matches your expectations."
+        answer: "Luxury is bespoke. Our rates are calculated based on vehicle class, security requirements, and specific itineraries. Contact our concierge for a tailored quotation that matches your expectations."
     },
     {
         id: "04",
-        question: "Is chauffeur service included?",
-        answer: "We offer both self-drive and professional chauffeur options. Our drivers are trained in elite hospitality and defensive driving, ensuring your journey is as safe as it is sophisticated."
+        question: "Is professional security included?",
+        answer: "We offer both self-drive and executive security options. Our security personnel are trained in tactical protection and defensive driving, ensuring your journey is as safe as it is sophisticated."
     }
 ];
 

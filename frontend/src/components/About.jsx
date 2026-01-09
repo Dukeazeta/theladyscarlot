@@ -81,7 +81,7 @@ export default function About() {
                             <div className="about__highlight">
                                 <span className="about__highlight-icon">✧</span>
                                 <h3 className="about__highlight-title">Secure</h3>
-                                <p className="about__highlight-desc">Trained professional drivers and escort options.</p>
+                                <p className="about__highlight-desc">Elite security personnel and executive protection.</p>
                             </div>
                         </div>
                     </motion.div>

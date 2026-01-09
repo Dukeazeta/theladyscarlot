@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { HiSun, HiMoon } from 'react-icons/hi';
 import './ThemeToggle.css';
 
-export function useTheme() {
+const ThemeContext = createContext();
+
+export function ThemeProvider({ children }) {
     const [theme, setTheme] = useState(() => {
         return localStorage.getItem('theme') || 'dark';
     });
@@ -17,7 +19,19 @@ export function useTheme() {
         setTheme(prev => prev === 'dark' ? 'light' : 'dark');
     };
 
-    return { theme, toggleTheme, setTheme };
+    return (
+        <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
+}
+
+export function useTheme() {
+    const context = useContext(ThemeContext);
+    if (!context) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+    return context;
 }
 
 export default function ThemeToggle() {
@@ -49,27 +63,33 @@ export default function ThemeToggle() {
 }
 
 // Mobile Switch Component
-export function ThemeSwitch({ theme, toggleTheme }) {
+export function ThemeSwitch({ theme: propTheme, toggleTheme: propToggleTheme }) {
+    const { theme: contextTheme, toggleTheme: contextToggleTheme } = useTheme();
+
+    // Use props if provided (for backward compatibility), otherwise use context
+    const currentTheme = propTheme || contextTheme;
+    const currentToggle = propToggleTheme || contextToggleTheme;
+
     return (
         <div className="theme-switch">
             <span className="theme-switch__label">
-                {theme === 'dark' ? 'Midnight Mode' : 'Champagne Mode'}
+                {currentTheme === 'dark' ? 'Midnight Mode' : 'Champagne Mode'}
             </span>
             <button
                 className="theme-toggle__btn"
-                onClick={toggleTheme}
+                onClick={currentToggle}
                 aria-label="Toggle theme"
             >
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={theme}
+                        key={currentTheme}
                         initial={{ scale: 0, rotate: -90 }}
                         animate={{ scale: 1, rotate: 0 }}
                         exit={{ scale: 0, rotate: 90 }}
                         transition={{ duration: 0.2 }}
                         className="theme-toggle__icon"
                     >
-                        {theme === 'dark' ? <HiSun /> : <HiMoon />}
+                        {currentTheme === 'dark' ? <HiSun /> : <HiMoon />}
                     </motion.div>
                 </AnimatePresence>
             </button>

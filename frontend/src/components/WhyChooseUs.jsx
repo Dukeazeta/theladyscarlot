@@ -7,7 +7,7 @@ const reasons = [
     {
         icon: HiOutlineShieldCheck,
         title: 'Verified & Insured',
-        description: 'All vehicles fully insured and verified drivers for your peace of mind.',
+        description: 'All vehicles fully insured and verified security protocols for your peace of mind.',
     },
     {
         icon: HiOutlineClock,
@@ -16,8 +16,8 @@ const reasons = [
     },
     {
         icon: HiOutlineUserGroup,
-        title: 'Professional Chauffeurs',
-        description: 'Experienced, courteous drivers who know Lagos inside and out.',
+        title: 'Elite Security',
+        description: 'Advanced security solutions and executive protection available upon request.',
     },
     {
         icon: HiOutlineSparkles,

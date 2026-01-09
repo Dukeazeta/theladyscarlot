@@ -13,7 +13,7 @@ const services = [
     {
         icon: HiOutlineBriefcase,
         title: 'Corporate Hire',
-        description: 'Impress clients and executives with premium chauffeur-driven vehicles for business occasions.',
+        description: 'Impress clients and executives with premium security-enhanced vehicles for business occasions.',
     },
     {
         icon: HiOutlineGlobe,

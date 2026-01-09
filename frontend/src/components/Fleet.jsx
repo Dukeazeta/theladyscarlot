@@ -38,7 +38,7 @@ const vehicles = [
         name: 'Lexus LX500',
         category: 'Premium SUV',
         image: lexusImg,
-        features: ['Refined Strength', 'Chauffeur Top Choice'],
+        features: ['Refined Strength', 'Elite Security'],
     },
     {
         id: 5,

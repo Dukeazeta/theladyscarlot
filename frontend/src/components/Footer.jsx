@@ -1,8 +1,11 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaTiktok } from 'react-icons/fa';
 import { HiLocationMarker, HiPhone, HiMail } from 'react-icons/hi';
+import { useTheme } from './ThemeToggle';
+import logoLight from '../assets/logo-light.png';
+import logoDark from '../assets/logo-dark.png';
 import './Footer.css';
 
 const INSTAGRAM = 'https://instagram.com/theladyscarlot';
@@ -20,9 +23,11 @@ const navLinks = [
 const socialLinks = [
     { icon: FaInstagram, href: INSTAGRAM, label: 'Instagram' },
     { icon: FaWhatsapp, href: 'https://wa.me/2347048133230', label: 'WhatsApp' },
+    { icon: FaTiktok, href: 'https://tiktok.com/@theladyscarlot', label: 'TikTok' },
 ];
 
 export default function Footer() {
+    const { theme } = useTheme();
     const footerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: footerRef,
@@ -46,8 +51,7 @@ export default function Footer() {
                         transition={{ duration: 0.8 }}
                     >
                         <a href="#home" className="footer__logo">
-                            <span className="footer__logo-text">The Lady's</span>
-                            <span className="footer__logo-accent">Car Lot</span>
+                            <img src={theme === 'dark' ? logoLight : logoDark} alt="The Lady's Car Lot" className="footer__logo-img" />
                         </a>
                         <p className="footer__tagline">
                             Lagos' premier luxury car rental service.
@@ -110,7 +114,7 @@ export default function Footer() {
                             </div>
                             <div className="footer__contact-item">
                                 <HiMail />
-                                <span>hello@theladyscarlot.com</span>
+                                <span>theladyscarlot@gmail.com</span>
                             </div>
                         </div>
                     </motion.div>

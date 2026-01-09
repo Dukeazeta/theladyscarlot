@@ -6,7 +6,7 @@ import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './CTA.css';
 
 const INSTAGRAM_DM = 'https://ig.me/m/theladyscarlot';
-const WHATSAPP = 'https://wa.me/2341234567890'; // Update with actual number
+const WHATSAPP = 'https://wa.me/2347048133230';
 
 export default function CTA() {
     const ref = useRef(null);

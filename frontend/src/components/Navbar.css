@@ -84,24 +84,21 @@
 /* Logo */
 .navbar__logo {
     display: flex;
-    flex-direction: column;
-    line-height: 1;
+    align-items: center;
+    height: 100%;
 }
 
-.navbar__logo-text {
-    font-family: var(--font-display);
-    font-size: var(--text-base);
-    font-weight: 800;
-    color: var(--color-text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+.navbar__logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: all var(--transition-smooth);
 }
 
-.navbar__logo-accent {
-    font-family: var(--font-display);
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: var(--color-accent);
+@media (max-width: 1024px) {
+    .navbar__logo-img {
+        height: 40px;
+    }
 }
 
 /* Desktop Navigation */

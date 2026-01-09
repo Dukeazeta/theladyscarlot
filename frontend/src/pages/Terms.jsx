@@ -15,7 +15,7 @@ export default function Terms() {
 
             <div className="legal-section">
                 <h2>3. Delayed Payments</h2>
-                <p>Late payment affects driver arrival times. The Lady is not responsible for delays if payment is made less than 2 hours before the scheduled arrival, depending on the client's location.</p>
+                <p>Late payment affects security personnel arrival times. The Lady is not responsible for delays if payment is made less than 2 hours before the scheduled arrival, depending on the client's location.</p>
             </div>
 
             <div className="legal-section">
