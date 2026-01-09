@@ -22,7 +22,7 @@ const faqs = [
     {
         id: "04",
         question: "Is professional security included?",
-        answer: "We offer both self-drive and executive security options. Our security personnel are trained in tactical protection and defensive driving, ensuring your journey is as safe as it is sophisticated."
+        answer: "We provide executive security details with every booking. Our security personnel are trained in tactical protection and defensive driving, ensuring your journey is as safe as it is sophisticated."
     }
 ];
 

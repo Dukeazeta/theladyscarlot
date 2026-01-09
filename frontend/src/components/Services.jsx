@@ -22,8 +22,8 @@ const services = [
     },
     {
         icon: HiOutlineKey,
-        title: 'Self-Drive Rentals',
-        description: 'Take the wheel yourself with our flexible self-drive options for daily, weekly, or monthly rentals.',
+        title: 'Tactical Escort',
+        description: 'Elite armed or unarmed security details providing dedicated protection for every destination.',
     },
 ];
 

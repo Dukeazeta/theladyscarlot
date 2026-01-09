@@ -10,7 +10,7 @@ export default function Terms() {
 
             <div className="legal-section">
                 <h2>2. Permitted Zones</h2>
-                <p>There may be restrictions when driving the rental car to another state. Hence, it is necessary to inform our contact center at the time of booking if this is intended. Certain areas within Lagos incur additional charges as they are considered outskirts by the company.</p>
+                <p>There may be restrictions when traveling with the rental vehicle to another state. Hence, it is necessary to inform our contact center at the time of booking if this is intended. Certain areas within Lagos incur additional charges as they are considered outskirts by the company.</p>
             </div>
 
             <div className="legal-section">
