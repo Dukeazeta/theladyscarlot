@@ -9,6 +9,25 @@ import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
+  const hostname = window.location.hostname;
+
+  // Handle subdomain masking
+  if (hostname === 'terms.theladyscarlot.com') {
+    return (
+      <ThemeProvider>
+        <Terms />
+      </ThemeProvider>
+    );
+  }
+
+  if (hostname === 'privacy.theladyscarlot.com') {
+    return (
+      <ThemeProvider>
+        <Privacy />
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider>
       <Router>
