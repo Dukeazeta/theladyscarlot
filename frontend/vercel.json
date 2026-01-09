@@ -1,0 +1,28 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "terms.theladyscarlot.com"
+                }
+            ],
+            "destination": "/terms"
+        },
+        {
+            "source": "/(.*)",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "privacy.theladyscarlot.com"
+                }
+            ],
+            "destination": "/privacy"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
